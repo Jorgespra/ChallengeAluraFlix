@@ -1,0 +1,11 @@
+.texto{
+    display: flex;
+    justify-content: center;
+    width: 432px;
+    font-size: 18px;
+    height: 70;
+    background-color: black;
+    border-color: aqua;
+    border-style: solid;
+    border-radius: 15px;
+}

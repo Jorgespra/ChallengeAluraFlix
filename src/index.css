@@ -1,0 +1,15 @@
+:root{
+  --font:"Roboto", sans-serif;
+  --azulClaro: #6BD1FF;
+  --azulOscuro: #03122F; 
+  --grisClaro: #FFFFFF;
+  --negro: #000000;
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,7 @@
+.pie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--negro);
+    height: 125px;
+}

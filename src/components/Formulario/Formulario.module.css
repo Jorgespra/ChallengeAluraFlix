@@ -1,0 +1,150 @@
+.Formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.tituloFormulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 782px;
+    height: 138px;
+    
+}
+
+.titulo{
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.parrafoTitulo{  
+    color: white;
+    margin-top: -33px;  
+}
+
+.crearTarjeta{
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta{
+    display: flex;
+    justify-content: left;
+    color: white;
+}
+
+.datas{
+    display: flex;
+    flex-direction: column;
+    color: white;
+   width: 1172px;   
+}
+
+.seccion1{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    width: 1172px;
+    margin: 10px;
+}
+
+
+
+.ingreso{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0px 10px 10px 10px;
+    
+}
+
+.cuadrito{
+    display: flex; 
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: #000000;
+    color: white;
+}
+
+.seccion2{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    color: white;
+}
+
+.ingreso2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0px 10px 10px 10px;
+    width: 573px;
+    height: 266px;
+}
+
+.cuadrito2{
+    display: flex; 
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: #000000;
+    color: white;
+    text-align:justify;
+    height: 220px;
+    text-justify: distribute;
+ 
+}
+
+.successMessage {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+    text-size-adjust: 100%;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between; 
+    width: 400px;
+    height: 52px;
+    margin: 35px;
+    
+    
+    
+
+}
+
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 30px;
+    font-size: large;
+    border-radius: 18px;
+    border: solid 18px white;
+
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 0.8em;
+}

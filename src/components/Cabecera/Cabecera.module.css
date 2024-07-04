@@ -1,0 +1,18 @@
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 3em;
+    background-color: var(--negro);
+    
+}
+
+.cabecera img{
+    align-self: start;
+}
+
+.nav{
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+

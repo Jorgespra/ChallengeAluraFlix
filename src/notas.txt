@@ -1,0 +1,5 @@
+npm install -g -json-server
+
+agregar a scripts en package.json  
+"json:server": "json-server --watch db.json"
+npm run json:server

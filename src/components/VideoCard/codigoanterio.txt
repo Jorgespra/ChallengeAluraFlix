@@ -1,0 +1,65 @@
+import React, { useRef } from 'react';
+import iconEditar from './iconEditar.png';
+import styles from './VideoCard.module.css';
+
+const EditVideoPopup = ({ id }) => {
+    const tableRef = useRef(null);
+
+    const openPopup = () => {
+        const popupWidth = 600;
+        const popupHeight = 400;
+        const left = window.innerWidth / 2 - popupWidth / 2;
+        const top = window.innerHeight / 2 - popupHeight / 2;
+        const popupParams = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=${popupWidth},height=${popupHeight},top=${top},left=${left}`;
+        const editUrl = `http://localhost:3000/videos/${id}`;
+        window.open(editUrl, 'EditarVideoPopup', popupParams);
+    };
+
+    const handleClick = (e) => {
+        e.stopPropagation();
+        const rowData = e.target.parentElement.dataset; // Assuming data attributes are set on parent element
+        console.log('Row Data:', rowData);
+        fillData(rowData);
+    };
+
+    const fillData = (data) => {
+        // Use refs to access DOM elements
+        if (tableRef.current) {
+            const inputs = tableRef.current.querySelectorAll('input');
+            inputs.forEach((input) => {
+                const index = input.id;
+                input.value = data[index.toLowerCase()]; // Assuming index is lowercase in data attributes
+                console.log(input);
+            });
+        }
+    };
+
+    return (
+        <>
+            <img
+                src={iconEditar}
+                alt="Icono Editar"
+                className={styles.iconButton}
+                onClick={openPopup}
+            />
+            <h1>Modificar</h1>
+            <table ref={tableRef}>
+                <tbody>
+                    <tr onClick={handleClick} data-id="1" data-name="Video A" data-category="Categoría A">
+                        <td>Video A</td>
+                        <td>Categoría A</td>
+                        {/* Other columns */}
+                    </tr>
+                    <tr onClick={handleClick} data-id="2" data-name="Video B" data-category="Categoría B">
+                        <td>Video B</td>
+                        <td>Categoría B</td>
+                        {/* Other columns */}
+                    </tr>
+                    {/* Additional rows */}
+                </tbody>
+            </table>
+        </>
+    );
+};
+
+export default EditVideoPopup;
